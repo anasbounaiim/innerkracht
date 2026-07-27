@@ -1,4 +1,6 @@
 .nuxt
+.nuxt-broken-*
+.nuxt-dev.*.log
 .output
 node_modules
 .env

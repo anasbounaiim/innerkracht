@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   robots: { disallow: ['/api/contact'] },
   image: { domains: ['innerkracht.be', 'images.unsplash.com'], format: ['avif', 'webp'], quality: 82 },
   typescript: { strict: true },
-  routeRules: {
+  routeRules: process.env.NODE_ENV === 'development' ? {} : {
     '/': { swr: 900 },
     '/blog/**': { swr: 900 },
     '/aanbod/**': { swr: 900 }
