@@ -1,0 +1,4 @@
+<script setup lang="ts">import { HugeiconsIcon } from '@hugeicons/vue'; import { ArrowRight02Icon, SparklesIcon } from '@hugeicons/core-free-icons'</script>
+<template>
+  <section class="bg-clay text-white"><div class="container-page section text-center"><HugeiconsIcon :icon="SparklesIcon" :size="32" :stroke-width="1.4" class="mx-auto text-white/80" aria-hidden="true" /><p class="eyebrow mt-5 !text-white/70">Een eerste stap</p><h2 class="mx-auto mt-5 max-w-4xl">Klaar om opnieuw in beweging te komen?</h2><p class="mx-auto mt-6 max-w-xl text-white/85">Voel je welkom voor een vrijblijvend telefonisch kennismakingsgesprek. Samen kijken we of hypnotherapie bij jou past.</p><NuxtLink to="/contact" class="btn mt-8 gap-2 bg-white text-forest">Maak een afspraak <HugeiconsIcon :icon="ArrowRight02Icon" :size="18" :stroke-width="1.8" aria-hidden="true" /></NuxtLink></div></section>
+</template>

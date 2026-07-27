@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Runalto";
+  src: url("/fonts/Runalto-Regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Runalto", Georgia, serif;
+  --color-forest: #697668;
+  --color-forest-dark: #4a5347;
+  --color-sage: #919886;
+  --color-clay: #697668;
+  --color-ivory: #faf7f1;
+  --color-sand: #ddd7c2;
+  --color-ink: #4a5347;
+  --color-muted: #697668;
+}
+
+:root { color-scheme: light; --focus: #697668; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: #4a5347; font-family: var(--font-sans); font-weight: 400; line-height: 1.7; }
+body.menu-open { overflow: hidden; }
+h1,h2,h3,.font-display { font-family: var(--font-display); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; }
+h1 { font-size: clamp(3.25rem, 8vw, 7rem); }
+h2 { font-size: clamp(2.4rem, 5vw, 4.75rem); }
+h3 { font-size: clamp(1.65rem, 3vw, 2.25rem); line-height: 1.05; }
+a,button,input,textarea,select { outline-offset: 4px; }
+:focus-visible { outline: 3px solid var(--focus); }
+.container-page { width: min(100% - 2rem, 1360px); margin-inline: auto; }
+.section { padding-block: clamp(5rem, 10vw, 9rem); }
+.eyebrow { color: #697668; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.prose-copy { max-width: 66ch; color: #697668; }
+.btn { display:inline-flex; min-height:48px; align-items:center; justify-content:center; gap:.55rem; border-radius:0; padding:.8rem 1.35rem; font-size:.78rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; transition:.2s ease; }
+.btn-primary { background:#697668; color:white; }
+.btn-primary:hover { background:#4a5347; transform:translateY(-2px); }
+.btn-secondary { border:1px solid #919886; color:#4a5347; }
+.btn-secondary:hover { border-color:#4a5347; }
+.reveal { animation: rise .65s ease both; }
+@keyframes rise { from { opacity:0; transform:translateY(16px) } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }

@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{error:{statusCode:number;statusMessage?:string}}>()</script>
+<template><main class="grid min-h-screen place-items-center bg-ivory p-6"><div class="max-w-xl text-center"><p class="eyebrow">Fout {{error.statusCode}}</p><h1 class="mt-4">{{error.statusCode===404?'Deze pagina bestaat niet.':'Er ging iets mis.'}}</h1><p class="mt-6 text-muted">{{error.statusMessage}}</p><NuxtLink to="/" class="btn btn-primary mt-8">Terug naar home</NuxtLink></div></main></template>
